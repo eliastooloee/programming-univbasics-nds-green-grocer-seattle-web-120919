@@ -1,20 +1,32 @@
 def find_item_by_name_in_collection(name, collection)
-  # Implement me first!
-  #
-  # Consult README for inputs and outputs
+  i=0
+  #Iterate through collection of items as long as count is less than the length of the collection, returning the the value if it matches the iput. Increment the count.
+    while i<collection.length do
+    return collection[i] if name===collection[i][:item]
+    i+=1
+  end
+  nil
 end
 
 def consolidate_cart(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This returns a new Array that represents the cart. Don't merely
-  # change `cart` (i.e. mutate) it. It's easier to return a new thing.
-end
+  consolidated_cart={}
+  cart.each do |item|
+    item.each do |hash, describe|
+      if consolidated_cart[name]
+        consolidated_cart[name][:count] +=1
+      else
+        consolidated_cart[name]=describe
+        consolidated_cart[name][:count]=1
+      end
+    end
+  end
+  consolidated_cart
+end  
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
-  # REMEMBER: This method **should** update cart
+  # REMEMBER: This method **shou
 end
 
 def apply_clearance(cart)
